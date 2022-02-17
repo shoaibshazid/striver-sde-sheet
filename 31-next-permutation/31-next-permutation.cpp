@@ -9,7 +9,7 @@ public:
        } 
         if(idx1<0) reverse(nums.begin(),nums.end());
         else{
-            for(idx2=n-1;idx2>=0;idx2--){
+            for(idx2=n-1;idx2>idx1;idx2--){
                 if(nums[idx2]>nums[idx1]) 
                 {
                     break; 
