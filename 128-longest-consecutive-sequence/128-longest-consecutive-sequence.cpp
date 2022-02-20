@@ -8,7 +8,7 @@ public:
 
   int longestStreak = 0;
 
-  for (int num: nums) {
+  for (auto &num: hashSet) {
     if (!hashSet.count(num - 1)) {
       int currentNum = num;
       int currentStreak = 1;
