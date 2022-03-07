@@ -10,10 +10,10 @@
  */
 class Solution {
 private:
-    ListNode* solve(ListNode* &first,ListNode* &second){
-        if(first->next==NULL){
-            first->next=second;
-            return first;
+    ListNode* solve(ListNode* &first,ListNode* &second){ 
+        if(first->next==NULL){ 
+            first->next=second; 
+            return first; 
         }
         ListNode* curr1=first;
         ListNode* next1=curr1->next;
@@ -35,13 +35,13 @@ private:
                     return first;
                 }
             }
-        }
+        } 
         return first;
     }
 public:
-    ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
+    ListNode* mergeTwoLists(ListNode* &list1, ListNode* &list2) {
             if(list1==NULL) return list2;
-            if(list2==NULL) return list1;
+            if(list2==NULL) return list1;  
             if(list1->val<=list2->val){
                 return solve(list1,list2);
             }
